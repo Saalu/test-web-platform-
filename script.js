@@ -1,5 +1,6 @@
 const demo = document.getElementById('demo');
 const button = document.getElementById('btn');
+const button2 = document.getElementById('btn2');
 
 const ul = document.createElement('ul');
 const li = document.createElement('li');
@@ -19,4 +20,10 @@ button.addEventListener('click', () => {
   if (demo.hasChildNodes) return console.log('No Child Nodes');
 
   return console.log('Has child');
+});
+
+button2.addEventListener('click', () => {
+  // fetch('https://picsum.photos/list')
+  fetch('data.txt').then((res) => console.log(res.txt()));
+  // .then((data) => console.log(data));
 });
