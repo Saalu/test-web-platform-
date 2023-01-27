@@ -23,7 +23,8 @@ button.addEventListener('click', () => {
 });
 
 button2.addEventListener('click', () => {
-  // fetch('https://picsum.photos/list')
-  fetch('data.txt').then((res) => console.log(res.txt()));
+  fetch('https://picsum.photos/list')
+  .then(res => res.json())
+  .then(data => console.log(data))
   // .then((data) => console.log(data));
 });
